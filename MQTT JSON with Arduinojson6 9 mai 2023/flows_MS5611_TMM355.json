@@ -1,0 +1,448 @@
+[
+    {
+        "id": "650c34d0e19288a2",
+        "type": "tab",
+        "label": "TMM355",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "21e58a1c18bf3366",
+        "type": "mqtt in",
+        "z": "650c34d0e19288a2",
+        "name": "TMM/TMM355",
+        "topic": "TMM/TMM355",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "8053294be1f1e4f7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 480,
+        "wires": [
+            [
+                "73bdd361a12fab68",
+                "52eefe1244d1441c",
+                "bddf2280bf0d45b7",
+                "ee098d584149d927",
+                "904b6d1fdcf24fdf",
+                "da3e38bcabebab68"
+            ]
+        ]
+    },
+    {
+        "id": "73bdd361a12fab68",
+        "type": "function",
+        "z": "650c34d0e19288a2",
+        "name": "Temperature",
+        "func": "const input=msg.payload;\nmsg.payload=input.Temperature\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "a2026b7488f707cf",
+                "bb9f915897d5fd96"
+            ]
+        ]
+    },
+    {
+        "id": "52eefe1244d1441c",
+        "type": "function",
+        "z": "650c34d0e19288a2",
+        "name": "Pression",
+        "func": "const input=msg.payload;\nmsg.payload=input.Pressure\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 600,
+        "wires": [
+            [
+                "315c0394b9439b5f"
+            ]
+        ]
+    },
+    {
+        "id": "a2026b7488f707cf",
+        "type": "ui_gauge",
+        "z": "650c34d0e19288a2",
+        "name": "Température",
+        "group": "58a794c84681c539",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e38596438ec40d60",
+        "type": "ui_gauge",
+        "z": "650c34d0e19288a2",
+        "name": "Pression",
+        "group": "58a794c84681c539",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "900",
+        "max": "1100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 680,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bddf2280bf0d45b7",
+        "type": "function",
+        "z": "650c34d0e19288a2",
+        "name": "RSSI",
+        "func": "const input=msg.payload;\nmsg.payload=input.RSSI\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "48168de2b0db4912"
+            ]
+        ]
+    },
+    {
+        "id": "48168de2b0db4912",
+        "type": "ui_text",
+        "z": "650c34d0e19288a2",
+        "group": "58a794c84681c539",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "RSSI",
+        "label": "RSSI",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bb9f915897d5fd96",
+        "type": "ui_chart",
+        "z": "650c34d0e19288a2",
+        "name": "Chart Température",
+        "group": "8c063e6f77d6358b",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "label": "Température",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a8bdf24d7f7a7b7",
+        "type": "ui_chart",
+        "z": "650c34d0e19288a2",
+        "name": "Chart Pression",
+        "group": "8c063e6f77d6358b",
+        "order": 3,
+        "width": 6,
+        "height": 4,
+        "label": "Pression",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee098d584149d927",
+        "type": "debug",
+        "z": "650c34d0e19288a2",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "904b6d1fdcf24fdf",
+        "type": "function",
+        "z": "650c34d0e19288a2",
+        "name": "Nom de salle",
+        "func": "const input=msg.payload;\nmsg.payload=input.salle\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "127b0689fa53f7a8"
+            ]
+        ]
+    },
+    {
+        "id": "127b0689fa53f7a8",
+        "type": "ui_text",
+        "z": "650c34d0e19288a2",
+        "group": "58a794c84681c539",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Nom de la salle",
+        "label": "Nom de la salle",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a66458b0891311a6",
+        "type": "calculator",
+        "z": "650c34d0e19288a2",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "",
+        "constant": null,
+        "round": false,
+        "decimals": 0,
+        "x": 180,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96b828bb5c075466",
+        "type": "comment",
+        "z": "650c34d0e19288a2",
+        "name": "MS5611",
+        "info": "",
+        "x": 240,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "315c0394b9439b5f",
+        "type": "calculator",
+        "z": "650c34d0e19288a2",
+        "name": "",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "100",
+        "round": false,
+        "decimals": 0,
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "e38596438ec40d60",
+                "0a8bdf24d7f7a7b7"
+            ]
+        ]
+    },
+    {
+        "id": "da3e38bcabebab68",
+        "type": "function",
+        "z": "650c34d0e19288a2",
+        "name": "sensorType",
+        "func": "const input=msg.payload;\nmsg.payload=input.sensorType\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "ea1c21076bd6ebf8"
+            ]
+        ]
+    },
+    {
+        "id": "ea1c21076bd6ebf8",
+        "type": "ui_text",
+        "z": "650c34d0e19288a2",
+        "group": "8c063e6f77d6358b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "sensorType",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 570,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8053294be1f1e4f7",
+        "type": "mqtt-broker",
+        "name": "mosquitto",
+        "broker": "156.18.46.123",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "58a794c84681c539",
+        "type": "ui_group",
+        "name": "Gauge TMM355",
+        "tab": "d59c8dc92e78813d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c063e6f77d6358b",
+        "type": "ui_group",
+        "name": "Charts TMM355",
+        "tab": "d59c8dc92e78813d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d59c8dc92e78813d",
+        "type": "ui_tab",
+        "name": "TMM355",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

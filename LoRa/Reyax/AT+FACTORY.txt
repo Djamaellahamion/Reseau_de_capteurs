@@ -1,0 +1,22 @@
+AT+FACTORY
+Manufacturer defaults：
+BAND：915MHz
+UART：115200
+Spreading Factor：12
+Bandwidth：125kHz
+Coding Rate：1
+Preamble Length：4
+Address：0
+Network ID：0
+CRFOP：15
+
+
+
+AT+PARAMETER=12,7,1,4
+
+AT+BAND?
+AT+BAND=868500000
+
+AT+SEND=0,5,HELLO
+AT+SEND=0,7,bonjour
+
