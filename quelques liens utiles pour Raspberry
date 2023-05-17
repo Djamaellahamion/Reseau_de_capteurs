@@ -8,3 +8,5 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 (pour installer Mosquitto sur Raspberrt Pi 3) https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
 
 (pour installer node red sur Raspberrt Pi 3) https://randomnerdtutorials.com/install-node-red-raspberry-pi/
+
+(pour installer influxdb2 sur Raspberrt Pi 3) https://randomnerdtutorials.com/install-influxdb-2-raspberry-pi/
