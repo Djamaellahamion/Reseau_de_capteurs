@@ -4,4 +4,7 @@ https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
 
 sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 (le mot de passe est Rose1981)
-https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
+
+(pour installer Mosquitto sur Raspberrt Pi 3) https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
+
+(pour installer node red sur Raspberrt Pi 3) https://randomnerdtutorials.com/install-node-red-raspberry-pi/
