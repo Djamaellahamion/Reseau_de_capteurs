@@ -1,3 +1,7 @@
 https://raspberrypi-guide.github.io/networking/create-wireless-access-point
 
 https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
+
+sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
+(le mot de passe est Rose1981)
+https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/
