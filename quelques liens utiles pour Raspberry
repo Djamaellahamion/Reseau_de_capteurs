@@ -18,7 +18,7 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 ne pas utiliser la bibliothèque 0.07 mais le lien suivant à mettre dans préférence
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
 
- et choisr la carte HELTEC LoRa V3 dans les ESP32, mais du coup la library HT_SSD1306Wire.h n'est plus valide
+ et choisr la carte HELTEC LoRa V3 dans les ESP32, mais du coup la library HT_SSD1306Wire.h n'est plus valide. Il faut utiliser la library: U8g2‑2.33.15.zip
  
  
  Lien HELTEC LoRa V3 pour LoRa et pins
