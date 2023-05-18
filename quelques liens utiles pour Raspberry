@@ -19,3 +19,7 @@ ne pas utiliser la bibliothèque 0.07 mais le lien suivant à mettre dans préf�
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
 
  et choisr la carte HELTEC LoRa V3 dans les ESP32, mais du coup la library HT_SSD1306Wire.h n'est plus valide
+ 
+ 
+ Lien HELTEC LoRa V3 pour LoRa et pins
+ https://github.com/JJJS777/Hello_World_RadioLib_Heltec-V3_SX1262/tree/main
