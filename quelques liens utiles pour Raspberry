@@ -25,3 +25,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  
  Lien HELTEC LoRa V3 pour LoRa et pins
  https://github.com/JJJS777/Hello_World_RadioLib_Heltec-V3_SX1262/tree/main
+ 
+ 
+ Pour TTGO LoRa32 V1.6.1 (semtech sx1278 avec radiolob)
+ https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/examples/RadioLibExamples/SX1276/SX1276_Transmit_Interrupt/utilities.h
