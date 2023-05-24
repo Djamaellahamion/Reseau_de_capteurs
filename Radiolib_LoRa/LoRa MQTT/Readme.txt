@@ -1,0 +1,2 @@
+Ce programme permet de créer une passerelle capable de recevoir les messages des Nodes LoRa et de les publier sur un topic créé à partir du message reçu.
+Les programmes des Nodes dans le dossier "LoRa pinpong" doivent être utilisées pour communiquer avec la Gateway.
