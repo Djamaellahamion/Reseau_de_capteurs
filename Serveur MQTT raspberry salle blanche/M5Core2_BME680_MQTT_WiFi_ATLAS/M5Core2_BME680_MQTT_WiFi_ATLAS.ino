@@ -139,6 +139,7 @@ void loop() {
   } else {
     Serial.println("Error sending message");
     M5.Lcd.drawString("Error sending message", 160, 200,1);
+    ESP.restart();  /*ESP restart function*/
   }
  
   client.loop();
