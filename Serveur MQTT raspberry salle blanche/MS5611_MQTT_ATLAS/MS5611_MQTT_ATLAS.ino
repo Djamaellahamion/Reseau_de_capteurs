@@ -12,7 +12,7 @@ const char* mqttUser = "pi_broker";
 const char* mqttPassword = "Rose1981";
 
 const String batiment = "TMM";
-const String salle = "TMM038";
+const String salle = "TMM040";
 const String Post = batiment + "/"+ salle; // c'est le post publié sur le broker
 const char* sensorType = "MS5611";
  
@@ -100,6 +100,7 @@ void loop() {
     Serial.println("Success sending message");
   } else {
     Serial.println("Error sending message");
+    ESP.restart();  /*ESP restart function*/
   }
  
   client.loop();
