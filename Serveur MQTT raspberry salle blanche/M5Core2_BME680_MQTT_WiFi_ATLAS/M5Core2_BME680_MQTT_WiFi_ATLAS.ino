@@ -23,6 +23,8 @@ const String batiment = "TMM";
 const String salle = "TMM044";
 const String Post = batiment + "/"+ salle; // c'est le post publié sur le broker
 const char* sensorType = "BME680";
+
+bool screen_state = false ;
  
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -108,6 +110,12 @@ void loop() {
   Serial.print(F("Reading completed at "));
   Serial.println(millis());
 
+  if(M5.Touch.ispressed()) {
+    screen_state = !screen_state;
+    delay(100);
+      if (screen_state){M5.Lcd.sleep();}
+      else {M5.Lcd.wakeup();}
+  }
 
 
   StaticJsonDocument<300> doc;
