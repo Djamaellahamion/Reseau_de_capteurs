@@ -22,6 +22,8 @@ const String batiment = "TMM";
 const String salle = "TMM038";
 const String Post = batiment + "/"+ salle; // c'est le post publié sur le broker
 const char* sensorType = "SHT31";
+
+bool screen_state = false ;
  
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -96,6 +98,12 @@ void loop() {
 
   //delay(1000);
 
+  if(M5.Touch.ispressed()) {
+    screen_state = !screen_state;
+    delay(100);
+      if (screen_state){M5.Lcd.sleep();}
+      else {M5.Lcd.wakeup();}
+  }
 
 
   StaticJsonDocument<300> doc;
