@@ -13,6 +13,8 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 (pour installer influxdb2 sur Raspberrt Pi 3) https://randomnerdtutorials.com/install-influxdb-2-raspberry-pi/
 (Token influxdb) Ne4fCPxAZRZp66FeEEwogn7vpU9i80Dw4exDI9LxQ0zFM_76TAP_IgUI0pzm1H9wCSs52071muevMlCTKki4Vw==
 
+(pour installer home assistant supervised: https://peyanski.com/how-to-install-home-assistant-supervised-official-way/#How_to_Install_Home_Assistant_Supervised)
+
 
 
 ---- pour HELTEC LoRa V3 ----
