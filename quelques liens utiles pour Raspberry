@@ -1,5 +1,4 @@
-https://raspberrypi-guide.github.io/networking/create-wireless-access-point
-https://www.tomshardware.com/how-to/raspberry-pi-access-point
+
 
 https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
 
@@ -36,3 +35,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  
  Lien pour créer le hotspot raspberry
  https://raspberrypi-guide.github.io/networking/create-wireless-access-point
+ 
+ autres liens pour hotspot:
+ https://raspberrypi-guide.github.io/networking/create-wireless-access-point
+ https://www.tomshardware.com/how-to/raspberry-pi-access-point
