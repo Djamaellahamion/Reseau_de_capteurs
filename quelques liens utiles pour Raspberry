@@ -33,9 +33,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  Pour TTGO LoRa32 V1.6.1 (semtech sx1278 avec radiolob)
  https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/examples/RadioLibExamples/SX1276/SX1276_Transmit_Interrupt/utilities.h
  
- Lien pour créer le hotspot raspberry (sudo raspi-config pour mettre FR en WLAN)
+ Lien pour créer le hotspot raspberry (sudo raspi-config pour mettre FR en WLAN) (sudo update et upgrade aussi)
  https://raspberrypi-guide.github.io/networking/create-wireless-access-point
  
  autres liens pour hotspot:
- https://raspberrypi-guide.github.io/networking/create-wireless-access-point
+ https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/157-raspberry-pi-auto-wifi-hotspot-switch-internet
  https://www.tomshardware.com/how-to/raspberry-pi-access-point
