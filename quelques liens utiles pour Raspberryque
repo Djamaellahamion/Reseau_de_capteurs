@@ -17,6 +17,9 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 sudo usermod -aG docker nazario
 wget https://github.com/home-assistant/os-agent/releases/download/1.5.1/os-agent_1.5.1_linux_aarch64.deb
 sudo dpkg -i os-agent_1.5.1_linux_aarch64.deb
+et faire:  sudo apt --fix-broken install après car on n'arrive pas à la page de configuration de homeassistant-supervided
+wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
+sudo dpkg -i homeassistant-supervised.deb
 
 
 
