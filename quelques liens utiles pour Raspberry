@@ -39,3 +39,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  autres liens pour hotspot:
  https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/157-raspberry-pi-auto-wifi-hotspot-switch-internet
  https://www.tomshardware.com/how-to/raspberry-pi-access-point
+ 
+ 
+ MQTT:
+ https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/
