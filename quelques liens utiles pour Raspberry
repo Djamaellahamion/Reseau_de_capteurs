@@ -13,7 +13,7 @@ sudo mosquitto_passwd -c /etc/mosquitto/passwd pi_broker
 (Token influxdb) Ne4fCPxAZRZp66FeEEwogn7vpU9i80Dw4exDI9LxQ0zFM_76TAP_IgUI0pzm1H9wCSs52071muevMlCTKki4Vw==
 
 (pour installer home assistant supervised: https://peyanski.com/how-to-install-home-assistant-supervised-official-way/#How_to_Install_Home_Assistant_Supervised)
-(prendre arm7 pour raspberry pi3)
+(prendre aargh64 pour raspberry pi3)
 
 
 
