@@ -20,6 +20,7 @@ sudo dpkg -i os-agent_1.5.1_linux_aarch64.deb
 et faire:  sudo apt --fix-broken install après car on n'arrive pas à la page de configuration de homeassistant-supervided
 wget https://github.com/home-assistant/supervised-installer/releases/latest/download/homeassistant-supervised.deb
 sudo dpkg -i homeassistant-supervised.deb
+puis choisir raspberrypi3-64 pour notre pi3
 
 
 
