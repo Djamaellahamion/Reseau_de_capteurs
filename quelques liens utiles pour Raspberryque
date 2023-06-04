@@ -41,6 +41,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  Pour TTGO LoRa32 V1.6.1 (semtech sx1278 avec radiolob)
  https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series/blob/master/examples/RadioLibExamples/SX1276/SX1276_Transmit_Interrupt/utilities.h
  
+ 
  Lien pour créer le hotspot raspberry (sudo raspi-config pour mettre FR en WLAN) (sudo update et upgrade aussi)
  https://raspberrypi-guide.github.io/networking/create-wireless-access-point
  
@@ -51,3 +52,40 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  
  MQTT:
  https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/
+ 
+ 
+ 
+ 
+ pour tout installer avec docker IOTstack et ca marche
+https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
+
+
+Pour rajouter un mot de passe à Mosquitto installé sur le docker iotstack
+https://sensorsiot.github.io/IOTstack/Containers/Mosquitto/
+docker exec mosquitto mosquitto_passwd -b /mosquitto/pwfile/pwfile nazario Rose1981
+
+
+Pour rajouter un mot de passe à node-red
+docker exec nodered node -e "console.log(require('bcryptjs').hashSync(process.argv[1], 8));" Rose1981
+
+$2a$08$8cg74XhXSa3m68I8Q2lGmO9QpyRxgiEDFc4vgO4kFWfrmgTAPmrL2
+
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI3MDQ0YTdkYTA1ZWU0YzYyYjVjY2Q2ZjgxZGEyNWNkYiIsImlhdCI6MTY4NTgxMjU5MywiZXhwIjoyMDAxMTcyNTkzfQ.Tal7bf9uI3Q55e0qJ_HqfFLZjzN7GSnuJbRucQyHp_o
+
+
+pour voir les droits des dossiers raspberry : nazario@raspberrypi:~ $ ls –al (avec putty)
+sudo chmod -R 777 IOTstack   (cela donne tous les droits sur les répertoires et fichiers de IOTstack)
+
+docker-compose ps pour voir ce qui est installé via docker et les ports associés
+
+pour mot de passe influxdb2, changer dans le fichier :
+docker-compose.yml
+pour faire effectif les changements, aller dans le répertoire IOTstack
+cd IOTstack
+puis taper docker-compose up –d
+comme on a modifié docker-compose.yml, il va reconstruire influxdb2
+
+
+
