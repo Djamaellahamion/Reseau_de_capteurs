@@ -59,6 +59,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
  pour tout installer avec docker IOTstack et ca marche
 https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server
 
+pour configurer visual stuio code: https://www.youtube.com/watch?v=DV_OD4OPKno&t=402s
 
 Pour rajouter un mot de passe à Mosquitto installé sur le docker iotstack
 https://sensorsiot.github.io/IOTstack/Containers/Mosquitto/
