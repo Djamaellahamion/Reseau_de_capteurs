@@ -1,0 +1,147 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow complet TMM",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f2cd9d1426c51550",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "TMM/Salle/#",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "8db3fac0.99dd48",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 520,
+        "wires": [
+            [
+                "32716dedb3b5bbf6"
+            ]
+        ]
+    },
+    {
+        "id": "b8b8578facf9d694",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "measurement",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "32716dedb3b5bbf6",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 4",
+        "func": "msg.measurement=msg.payload.salle;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 520,
+        "wires": [
+            [
+                "b8b8578facf9d694",
+                "14ebc63b25cd3458"
+            ]
+        ]
+    },
+    {
+        "id": "14ebc63b25cd3458",
+        "type": "influxdb out",
+        "z": "f6f2187d.f17ca8",
+        "influxdb": "2954565ce6691dd3",
+        "name": "",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "Salle",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "LTDS",
+        "bucket": "SallesTMM",
+        "x": 750,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2fe3b18d1da07dbf",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Ce sont toutes les salles de TMM",
+        "info": "",
+        "x": 390,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8db3fac0.99dd48",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "156.18.46.246",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2954565ce6691dd3",
+        "type": "influxdb",
+        "hostname": "localhost",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://156.18.46.246:8086",
+        "rejectUnauthorized": true
+    }
+]
