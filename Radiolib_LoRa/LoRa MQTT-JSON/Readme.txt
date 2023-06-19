@@ -1,2 +1,0 @@
-Ce programme permet de créer une passerelle capable de recevoir les messages JSON des Nodes LoRa et de les publier au broker en extrayant le numéro du Node dans le JSON pour former le topic.
-Les programmes des Nodes dans le dossier "LoRa_JSON" doivent être utilisées pour communiquer avec la Gateway.
